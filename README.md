@@ -9,7 +9,7 @@ Static academic site for Meaghan N. Evans (GitHub Pages). No build step: edit th
 
 ## Before launch
 - [ ] Add CV as `assets/Evans_MN_CV.pdf`
-- [ ] Add email address (index.html, contact section)
+- [x] Add email address
 - [ ] Replace placeholder photos (search `TODO` in the HTML)
 - [ ] Check every `VERIFY` comment, especially the teaching & mentoring page and FWC role
 - [ ] Add earlier degrees under Education (index.html)
