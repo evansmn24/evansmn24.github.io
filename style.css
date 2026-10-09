@@ -235,10 +235,11 @@ p { margin: 0 0 1.1em; }
 }
 .specimen img {
   width: 100%;
+  height: auto;
   aspect-ratio: 4 / 5;
   object-fit: cover;
   border-radius: 2px;
-  object-position: 72% 40%;
+  object-position: 80% 50%;
   filter: saturate(.92);
 }
 .specimen figcaption {
