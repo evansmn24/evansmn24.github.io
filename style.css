@@ -499,6 +499,7 @@ p { margin: 0 0 1.1em; }
   object-fit: cover;
   border-radius: 2px;
 }
+.research-media img.natural { aspect-ratio: auto; height: auto; }
 .research-media figcaption {
   font-family: var(--mono);
   font-size: .72rem;
