@@ -1,0 +1,167 @@
+{
+  "last_updated": "2026-10-09T00:00:00+00:00",
+  "profile": {
+    "citations": 284,
+    "h_index": 9,
+    "i10_index": 8
+  },
+  "publications": [
+    {
+      "title": "Individual-level movement and space use of Sunda clouded leopards revealed by GPS telemetry and camera traps in a human-modified Bornean landscape",
+      "authors": "AJ Hearn, F Nájera, G Bolongon, <strong>MN Evans</strong>, S Lai, SW Teoh, ...",
+      "year": 2026,
+      "journal": "Animal Biotelemetry, 2026",
+      "volume_info": "",
+      "citations": 0,
+      "url": ""
+    },
+    {
+      "title": "Mammals show faster recovery from capture and tagging in human-disturbed landscapes",
+      "authors": "J Stiegler, CA Gallagher, R Hering, T Müller, M Tucker, M Apollonio, ... <strong>MN Evans</strong>, ...",
+      "year": 2024,
+      "journal": "Nature Communications 15 (1), 8079, 2024",
+      "volume_info": "",
+      "citations": 39,
+      "url": "",
+      "featured": true
+    },
+    {
+      "title": "Bald eagle mortality and nest failure due to clade 2.3.4.4 highly pathogenic H5N1 influenza a virus",
+      "authors": "NM Nemeth, MG Ruder, RL Poulson, R Sargent, S Breeding, <strong>MN Evans</strong>, ...",
+      "year": 2023,
+      "journal": "Scientific Reports 13 (1), 191, 2023",
+      "volume_info": "",
+      "citations": 82,
+      "url": "",
+      "featured": true
+    },
+    {
+      "title": "Breeding Bald Eagle (Haliaeetus leucocephalus) population and demographic trends in Florida, 1972–2017",
+      "authors": "JA Zimmerman, JM Brush, <strong>MN Evans</strong>, K Rogers, SA Nesbitt, E Leone, ...",
+      "year": 2023,
+      "journal": "Journal of Raptor Research 57 (4), 640–652, 2023",
+      "volume_info": "",
+      "citations": 0,
+      "url": ""
+    },
+    {
+      "title": "The price of persistence: Assessing the drivers and health implications of metal levels in indicator carnivores inhabiting an agriculturally fragmented landscape",
+      "authors": "<strong>MN Evans</strong>, S Waller, CT Müller, B Goossens, JA Smith, MSA Bakar, ...",
+      "year": 2022,
+      "journal": "Environmental Research 207, 112216, 2022",
+      "volume_info": "",
+      "citations": 9,
+      "url": "",
+      "featured": true
+    },
+    {
+      "title": "Malay Civet (Viverra tangalunga)",
+      "authors": "<strong>MN Evans</strong>, B Goossens",
+      "year": 2022,
+      "journal": "Wildlife Atlas of Sabah: Maps and Conservation, 191–198, 2022",
+      "volume_info": "",
+      "citations": 0,
+      "url": ""
+    },
+    {
+      "title": "Space-use patterns of Malay civets (Viverra tangalunga) persisting within a landscape fragmented by oil palm plantations",
+      "authors": "<strong>MN Evans</strong>, CT Müller, P Kille, GP Asner, S Guerrero-Sanchez, MSA Bakar, ...",
+      "year": 2021,
+      "journal": "Landscape Ecology 36 (3), 915–930, 2021",
+      "volume_info": "",
+      "citations": 12,
+      "url": "",
+      "featured": true
+    },
+    {
+      "title": "Physiological implications of life at the forest interface of oil palm agriculture: blood profiles of wild Malay civets (Viverra tangalunga)",
+      "authors": "<strong>MN Evans</strong>, S Guerrero-Sanchez, P Kille, CT Müller, MSA Bakar, ...",
+      "year": 2020,
+      "journal": "Conservation Physiology 8 (1), coaa127, 2020",
+      "volume_info": "",
+      "citations": 5,
+      "url": ""
+    },
+    {
+      "title": "Holt-based activity patterns of smooth-coated otter (Lutrogale perspicillata) in the Lower Kinabatangan Wildlife Sanctuary, Sabah, Malaysia",
+      "authors": "L Wai, <strong>MN Evans</strong>, H Bernard, B Goossens",
+      "year": 2020,
+      "journal": "IUCN/SSC Otter Specialist Group Bulletin 37 (1), 20–28, 2020",
+      "volume_info": "",
+      "citations": 6,
+      "url": ""
+    },
+    {
+      "title": "The price of persistence: small carnivore ecology within the anthropogenically-degraded Kinabatangan landscape",
+      "authors": "<strong>MN Evans</strong>",
+      "year": 2019,
+      "journal": "PhD thesis, Cardiff University, 2019",
+      "volume_info": "",
+      "citations": 3,
+      "url": ""
+    },
+    {
+      "title": "Chemical immobilization of free-ranging and captive Sunda clouded leopards (Neofelis diardi) with two anesthetic protocols: medetomidine-ketamine and tiletamine-zolazepam",
+      "authors": "F Nájera, AJ Hearn, J Ross, DAR Saldivar, <strong>MN Evans</strong>, ...",
+      "year": 2017,
+      "journal": "Journal of Veterinary Medical Science 79 (11), 1892–1898, 2017",
+      "volume_info": "",
+      "citations": 21,
+      "url": ""
+    },
+    {
+      "title": "The first recorded activity pattern for the Sunda stink-badger Mydaus javanensis (Mammalia: Carnivora: Mephitidae) using camera traps",
+      "authors": "V Stephen, <strong>M Evans</strong>, ABM Soffian, B Goossens",
+      "year": 2017,
+      "journal": "Raffles Bulletin of Zoology 65, 316–324, 2017",
+      "volume_info": "",
+      "citations": 4,
+      "url": ""
+    },
+    {
+      "title": "Small carnivores of the Lower Kinabatangan Wildlife Sanctuary, Sabah, Borneo, including a new locality for the otter civet Cynogale bennettii",
+      "authors": "<strong>MN Evans</strong>, SH Vickers, MS Abu-Bakar, B Goossens",
+      "year": 2016,
+      "journal": "Small Carnivore Conservation 54, 26–38, 2016",
+      "volume_info": "",
+      "citations": 18,
+      "url": ""
+    },
+    {
+      "title": "First known satellite collaring of a viverrid species: preliminary performance and implications of GPS tracking Malay civets (Viverra tangalunga)",
+      "authors": "<strong>MN Evans</strong>, S Guerrero-Sanchez, MSA Bakar, P Kille, B Goossens",
+      "year": 2016,
+      "journal": "Ecological Research 31 (3), 475–481, 2016",
+      "volume_info": "",
+      "citations": 12,
+      "url": ""
+    },
+    {
+      "title": "Use of drone technology as a tool for behavioral research: a case study of crocodilian nesting",
+      "authors": "LJ Evans, TH Jones, K Pang, <strong>MN Evans</strong>, S Saimin, B Goossens",
+      "year": 2015,
+      "journal": "Herpetological Conservation and Biology 10 (1), 90–98, 2015",
+      "volume_info": "",
+      "citations": 50,
+      "url": ""
+    },
+    {
+      "title": "The role of avpr1a microsatellite length on reproductive success of female Microtus ochrogaster",
+      "authors": "<strong>MN Harris</strong>, RM Alvarez, B Keane, AD Talib, MJ Eiswerth, NG Solomon",
+      "year": 2014,
+      "journal": "Behaviour 151 (8), 1185–1207, 2014",
+      "volume_info": "",
+      "citations": 5,
+      "url": ""
+    },
+    {
+      "title": "Dispatch from the field: ecology of ground-web-building spiders with description of a new species (Araneae, Symphytognathidae)",
+      "authors": "JA Miller, M Schilthuizen, MJL Burmester, ML van der Graaf, V Merckx, ...",
+      "year": 2014,
+      "journal": "Biodiversity Data Journal, e1076, 2014",
+      "volume_info": "",
+      "citations": 17,
+      "url": ""
+    }
+  ]
+}
