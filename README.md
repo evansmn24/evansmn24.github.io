@@ -13,4 +13,4 @@ Static academic site for Meaghan N. Evans (GitHub Pages). No build step: edit th
 - [ ] Replace placeholder photos with her own (search `TODO`). The civet photo is CC0 (James Eaton, Wikimedia Commons); the clouded leopard came from Luke's site
 - [ ] Check FWC role wording (index.html, research.html)
 - [ ] Add post-2021 grants, mentoring, service and publications-in-prep (CV used was ~2021)
-- [ ] Add a `CNAME` file if using a custom domain
+- [x] Add a `CNAME` file (meaghanevans.science)
