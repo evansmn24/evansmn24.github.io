@@ -1,0 +1,96 @@
+head:
+  kicker: Teaching
+  heading: Teaching and mentoring
+  lede: I teach with an emphasis on fieldwork and hands-on experience, and I enjoy helping students develop their own research projects.
+meta_description: "Teaching and mentoring by Meaghan N. Evans: field-based mammalogy, wildlife techniques and student research mentoring."
+
+strip:
+  - label: Field courses
+    value: 50+ coordinated at Danau Girang, 2013–2019
+  - label: Institutions
+    value: 16 universities and schools
+  - label: Students
+    value: 800+ on visiting courses
+  - label: Trained in the field
+    value: 100+ students, volunteers and scientists
+
+philosophy:
+  kicker: Philosophy
+  heading: Approach
+  body: |
+    I think mammalogy is best taught as a hands-on course. By the end, students should be able to identify local species, design a survey, handle animals safely and ethically, and analyse field data. I'd build the course around specimen labs for identification and anatomy, field labs using live traps, camera traps and telemetry, and projects using real monitoring data.
+
+    Most of what I know about teaching I learned in the field, working with students who had often never been in a rainforest before. Within a few days they could set a camera trap, find their way with a GPS and collect data they would go on to analyse themselves. I want students to leave a course with skills they will actually use in a job, and with a sense of how research feeds into management decisions.
+
+field_courses:
+  kicker: Field teaching
+  heading: Field courses
+  body: |
+    From 2013 to 2019 I was a core field advisor at Danau Girang Field Centre in Sabah and co-led the Centre's work with visiting university courses. I coordinated more than 50 field courses from 16 institutions, involving over 800 undergraduate and graduate students, and taught on them in the forest, on the river and in the lab.
+
+    Visiting courses came from universities including Cardiff, Miami University, Oregon State, Portland State, the University of Hong Kong and Leiden, along with school groups from Malaysia and Singapore.
+  skills:
+    - label: Camera trapping
+      value: Survey design, setting stations, species identification and activity data
+    - label: Capture & tracking
+      value: Small mammal live-trapping, handling, and GPS, UHF and VHF telemetry
+    - label: Habitat assessment
+      value: Vegetation plots, forest structure and riparian surveys
+    - label: Behaviour
+      value: Ethograms and focal follows
+    - label: Navigation & safety
+      value: GPS navigation, river work and fieldwork in remote conditions
+    - label: Analysis
+      value: Turning field data into results in R and GIS
+
+earlier:
+  kicker: Earlier teaching
+  heading: Education programs
+  items:
+    - label: W.K. Kellogg Biological Station & Bird Sanctuary
+      value: Senior Environmental Educator, 2010. Designed and led inquiry-based science programs for around 80 school-age summer camp students.
+    - label: Project Dragonfly, Miami University
+      value: Program & Research Assistant, 2010–2012. Helped develop courses for the Advanced Inquiry Program and Global Field Program master's degrees, and compiled conservation case studies on Southeast Asian cats for zoo education programs.
+    - label: Integrated Biodiversity & Ecosystem Management Training Course
+      value: Third Country Training Programme, Sandakan, 2014. Contributed to a session on wildlife responses to habitat fragmentation.
+
+courses:
+  kicker: Courses
+  heading: Courses I can teach
+  items:
+    - level: Undergraduate · Field
+      title: Mammalogy
+      body: Evolution, diversity, identification and ecology of mammals, with specimen labs and field sessions using live-trapping, camera traps and sign surveys.
+    - level: Undergraduate · Field
+      title: Wildlife Field Techniques
+      body: Capture and handling, telemetry, camera-trap study design and the ethics and safety of working with wild animals.
+    - level: Graduate · Quantitative
+      title: Animal Movement Ecology & Telemetry Analysis
+      body: "From choosing tracking technology and collaring ethically to analysing the data in R: home ranges, habitat and step selection, behavioural states, and linking tracks to remote sensing and connectivity planning. Students finish with a manuscript-style analysis of their own or open Movebank data."
+    - level: Graduate
+      title: Carnivores in Human-Modified Landscapes
+      body: A seminar on movement, health and conflict for carnivores in agricultural and urbanising systems, built around primary literature and student-led analyses.
+    - level: Graduate
+      title: Wildlife Health & Ecotoxicology
+      body: Contaminants, physiology and emerging disease in wild populations, and how individual health affects populations.
+  also: "Also: conservation biology · long-term monitoring and data management · study abroad and tropical field courses"
+
+mentoring:
+  kicker: Mentoring
+  heading: Mentoring
+  body: I encourage students to take ownership of their projects, from developing the question through to publication. I'm particularly keen to give undergraduates their first experience of field research.
+  items:
+    - label: M.Sc. student, Universiti Malaysia Sabah
+      value: Academic supervisor, 2016–2018. I helped secure her funding and oversaw the first otter survey in Borneo. Her thesis on smooth-coated otter ecology was published in the *IUCN Otter Specialist Group Bulletin* (Wai et al. 2020).
+    - label: Cardiff University placement students
+      value: Primary field supervisor for four undergraduates on professional training year research projects, and mentor to 22 more, 2013–2019.
+    - label: Field assistants & volunteers
+      value: Trained local and international assistants, volunteers and visiting scientists in capture, tracking and camera-trap methods on the Kinabatangan Small Carnivore Project.
+
+outreach:
+  kicker: Outreach
+  heading: Public engagement
+  body: |
+    I presented small carnivore research in the *Borneo Jungle Diaries* television series (Season 1, “Civets: Aromatic Animals”, Scubazoo). I've also presented our Kinabatangan work to Sabah government officials, to two U.S. Ambassadors to Malaysia, and at community open days run with the local ecotourism cooperative, KOPEL.
+
+    As an undergraduate, I founded the Miami University Conservation Team to connect students with local and international conservation projects.

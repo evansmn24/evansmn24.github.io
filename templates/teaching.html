@@ -1,0 +1,116 @@
+{% extends "_layout.html" %}
+{% set page = 'teaching' %}
+{% block title %}Teaching &amp; Mentoring | {{ site.name }}{% endblock %}
+{% block description %}{{ c.meta_description }}{% endblock %}
+{% macro ruled(items, top=True) -%}
+          <ul class="ruled"{% if top %} style="margin-top:1.5rem"{% endif %}>
+{%- for it in items %}
+            <li><b>{{ it.label | mdi }}</b><span>{{ it.value | mdi }}</span></li>
+{%- endfor %}
+          </ul>
+{%- endmacro %}
+{% block main %}
+    <header class="page-head">
+      <div class="wrap">
+        <p class="kicker">{{ c.head.kicker }}</p>
+        <h1>{{ c.head.heading }}</h1>
+        <p class="lede">{{ c.head.lede | mdi }}</p>
+      </div>
+    </header>
+
+    <!-- Field teaching record -->
+    <div class="field-strip">
+      <div class="wrap">
+        <dl>
+{%- for s in c.strip %}
+          <div><dt>{{ s.label }}</dt><dd>{{ s.value | mdi }}</dd></div>
+{%- endfor %}
+        </dl>
+      </div>
+    </div>
+
+    <!-- Philosophy -->
+    <section class="section">
+      <div class="wrap split">
+        <div>
+          <p class="kicker"><span class="num">01</span> {{ c.philosophy.kicker }}</p>
+          <h2>{{ c.philosophy.heading }}</h2>
+        </div>
+        <div data-reveal>
+          {{ c.philosophy.body | md }}
+        </div>
+      </div>
+    </section>
+
+    <!-- Field courses -->
+    <section class="section">
+      <div class="wrap split">
+        <div>
+          <p class="kicker"><span class="num">02</span> {{ c.field_courses.kicker }}</p>
+          <h2>{{ c.field_courses.heading }}</h2>
+        </div>
+        <div data-reveal>
+          {{ c.field_courses.body | md }}
+{{ ruled(c.field_courses.skills) }}
+        </div>
+      </div>
+    </section>
+
+    <!-- Earlier teaching -->
+    <section class="section">
+      <div class="wrap split">
+        <div>
+          <p class="kicker"><span class="num">03</span> {{ c.earlier.kicker }}</p>
+          <h2>{{ c.earlier.heading }}</h2>
+        </div>
+        <div data-reveal>
+{{ ruled(c.earlier['items'], top=False) }}
+        </div>
+      </div>
+    </section>
+
+    <!-- Courses -->
+    <section class="section">
+      <div class="wrap">
+        <p class="kicker"><span class="num">04</span> {{ c.courses.kicker }}</p>
+        <h2>{{ c.courses.heading }}</h2>
+        <div class="courses">
+{%- for k in c.courses['items'] %}
+          <article class="course" data-reveal>
+            <span class="code">{{ k.level }}</span>
+            <h3>{{ k.title }}</h3>
+            <p>{{ k.body | mdi }}</p>
+          </article>
+{%- endfor %}
+        </div>
+        <p class="tags" style="margin-top:1.75rem;color:var(--muted)">{{ c.courses.also }}</p>
+      </div>
+    </section>
+
+    <!-- Mentoring -->
+    <section class="section night">
+      <div class="wrap split">
+        <div>
+          <p class="kicker"><span class="num">05</span> {{ c.mentoring.kicker }}</p>
+          <h2>{{ c.mentoring.heading }}</h2>
+        </div>
+        <div data-reveal>
+          <p>{{ c.mentoring.body | mdi }}</p>
+{{ ruled(c.mentoring['items']) }}
+        </div>
+      </div>
+    </section>
+
+    <!-- Outreach -->
+    <section class="section">
+      <div class="wrap split">
+        <div>
+          <p class="kicker"><span class="num">06</span> {{ c.outreach.kicker }}</p>
+          <h2>{{ c.outreach.heading }}</h2>
+        </div>
+        <div data-reveal>
+          {{ c.outreach.body | md }}
+        </div>
+      </div>
+    </section>
+{%- endblock %}

@@ -1,8 +1,22 @@
 # meaghan-evans-site
 
-Static academic site for Meaghan N. Evans (GitHub Pages). No build step: edit the HTML directly.
+Static academic site for Meaghan N. Evans (GitHub Pages).
 
-- `index.html`, `research.html`, `publications.html`, `teaching.html`: pages
+## Editing the text
+
+Open https://meaghanevans.science/admin/ and sign in with GitHub. Each page's
+text is in a form; Publish saves it to the repository and the site rebuilds
+itself within a few minutes.
+
+Behind the scenes the words live in `content/*.yml`, the page layouts in
+`templates/`, and `scripts/build_site.py` renders them into the HTML pages
+(the "Build site pages" GitHub Action runs it on every content change). Do not
+edit `index.html`, `research.html`, `teaching.html` or `publications.html` by
+hand; they are generated. Change `templates/` for layout and `content/` for words.
+
+- `content/`: the editable text, one file per page plus `site.yml`
+- `templates/`: page layouts (Jinja2)
+- `admin/`: the browser editor (Sveltia CMS) and its field configuration
 - `style.css`, `script.js`: shared styles and behaviour
 - `publications.json`: refreshed weekly from Google Scholar by `.github/workflows/update-publications.yml`
   (needs a `SERPAPI_KEY` repository secret). The home page lists every publication, newest first.

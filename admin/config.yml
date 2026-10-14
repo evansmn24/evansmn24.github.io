@@ -1,0 +1,334 @@
+# Site editor configuration (Sveltia CMS).
+# Edits are saved as commits to the repository; the "Build site pages" GitHub
+# Action then regenerates the HTML and GitHub Pages publishes it.
+backend:
+  name: github
+  repo: evansmn24/evansmn24.github.io
+  branch: main
+  base_url: https://REPLACE-WITH-AUTH-WORKER.workers.dev
+  commit_messages:
+    create: "Add {{collection}} “{{slug}}”"
+    update: "Edit {{slug}} via site editor"
+    delete: "Delete {{collection}} “{{slug}}”"
+    uploadMedia: "Upload “{{path}}”"
+    deleteMedia: "Delete “{{path}}”"
+
+site_url: https://meaghanevans.science
+display_url: https://meaghanevans.science
+logo_url: https://meaghanevans.science/favicon.svg
+media_folder: assets/img
+public_folder: assets/img
+locale: en
+editor:
+  preview: false
+
+collections:
+  - name: pages
+    label: Pages
+    description: Edit the words on each page. Changes go live a few minutes after you publish.
+    editor:
+      preview: false
+    files:
+      - name: site
+        label: Site details
+        file: content/site.yml
+        fields:
+          - { name: name, label: Name, widget: string }
+          - { name: tagline, label: Tagline (footer and browser tab), widget: string }
+          - { name: email, label: Contact email, widget: string }
+          - { name: scholar_url, label: Google Scholar link, widget: string }
+          - { name: cv_file, label: CV file path, widget: string, hint: "Upload a new CV to assets/ with the same name to replace it" }
+          - { name: site_url, label: Site address, widget: string }
+          - { name: meta_description, label: Search engine description, widget: text }
+          - { name: og_description, label: Social sharing description, widget: text }
+          - { name: og_image, label: Social sharing image path, widget: string }
+
+      - name: home
+        label: Home page
+        file: content/home.yml
+        fields:
+          - name: hero
+            label: Top of page
+            widget: object
+            fields:
+              - { name: kicker, label: Small line above the name, widget: string }
+              - { name: heading, label: Name heading, widget: string }
+              - { name: lede, label: Opening sentence, widget: text }
+              - { name: role_title, label: Job title, widget: string }
+              - { name: role_unit, label: Unit, widget: string }
+              - { name: role_org, label: Organisation, widget: string }
+              - { name: role_degree, label: Degree line, widget: string }
+              - { name: button_primary, label: First button text, widget: string }
+              - { name: button_secondary, label: Second button text, widget: string }
+              - { name: image, label: Photo, widget: image, required: false }
+              - { name: image_alt, label: Photo description (for screen readers), widget: string }
+              - { name: image_species, label: Species name under photo, widget: string }
+              - { name: image_caption, label: Common name under photo, widget: string }
+          - name: strip
+            label: Facts strip
+            widget: list
+            fields:
+              - { name: label, label: Label, widget: string }
+              - { name: value, label: Value, widget: string }
+          - name: aside
+            label: Side card
+            widget: object
+            fields:
+              - { name: currently, label: Currently, widget: text }
+              - { name: education, label: Education, widget: list, field: { name: item, label: Entry, widget: string } }
+              - { name: previously, label: Previously, widget: list, field: { name: item, label: Entry, widget: string } }
+              - { name: interests, label: Research interests, widget: list, field: { name: item, label: Interest, widget: string } }
+          - name: about
+            label: About section
+            widget: object
+            fields:
+              - { name: kicker, label: Small label, widget: string }
+              - { name: heading, label: Heading, widget: string }
+              - { name: body, label: Text, widget: markdown }
+          - name: research
+            label: Research section
+            widget: object
+            fields:
+              - { name: kicker, label: Small label, widget: string }
+              - { name: heading, label: Heading, widget: string }
+              - { name: intro, label: Introduction, widget: text }
+              - name: themes
+                label: Research themes
+                widget: list
+                fields:
+                  - { name: title, label: Title, widget: string }
+                  - { name: body, label: Text, widget: text }
+                  - { name: tags, label: Tags line, widget: string }
+              - { name: link_text, label: Link text, widget: string }
+          - name: publications
+            label: Publications section
+            widget: object
+            fields:
+              - { name: kicker, label: Small label, widget: string }
+              - { name: heading, label: Heading, widget: string }
+              - { name: link_text, label: Link text, widget: string }
+          - name: teaching
+            label: Teaching section
+            widget: object
+            fields:
+              - { name: kicker, label: Small label, widget: string }
+              - { name: heading, label: Heading, widget: string }
+              - { name: body, label: Text, widget: markdown }
+              - { name: link_text, label: Link text, widget: string }
+          - name: contact
+            label: Contact section
+            widget: object
+            fields:
+              - { name: kicker, label: Small label, widget: string }
+              - { name: heading, label: Heading, widget: string }
+              - { name: body, label: Text, widget: text }
+
+      - name: research
+        label: Research page
+        file: content/research.yml
+        fields:
+          - name: head
+            label: Page header
+            widget: object
+            fields:
+              - { name: kicker, label: Small label, widget: string }
+              - { name: heading, label: Heading, widget: string }
+              - { name: lede, label: Opening sentence, widget: text }
+          - { name: meta_description, label: Search engine description, widget: text }
+          - name: movement
+            label: "1. Movement and space use"
+            widget: object
+            fields:
+              - { name: kicker, label: Small label, widget: string }
+              - { name: heading, label: Heading, widget: string }
+              - { name: body, label: Text, widget: markdown }
+              - { name: papers, label: Key papers, widget: list, field: { name: item, label: Paper, widget: string } }
+              - { name: image, label: Photo, widget: image, required: false }
+              - { name: image_alt, label: Photo description, widget: string }
+              - { name: image_caption, label: Caption, widget: string }
+          - name: health
+            label: "2. Health and ecotoxicology"
+            widget: object
+            fields:
+              - { name: kicker, label: Small label, widget: string }
+              - { name: heading, label: Heading, widget: string }
+              - { name: body, label: Text, widget: markdown }
+              - { name: papers, label: Key papers, widget: list, field: { name: item, label: Paper, widget: string } }
+              - { name: image, label: Photo, widget: image, required: false }
+              - { name: image_alt, label: Photo description, widget: string }
+              - { name: image_caption, label: Caption, widget: string }
+          - name: disease
+            label: "3. Disease and monitoring"
+            widget: object
+            fields:
+              - { name: kicker, label: Small label, widget: string }
+              - { name: heading, label: Heading, widget: string }
+              - { name: body, label: Text, widget: markdown }
+              - { name: papers, label: Key papers, widget: list, field: { name: item, label: Paper, widget: string } }
+          - name: natural_history
+            label: "4. Natural history"
+            widget: object
+            fields:
+              - { name: kicker, label: Small label, widget: string }
+              - { name: heading, label: Heading, widget: string }
+              - { name: body, label: Text, widget: markdown }
+              - { name: papers, label: Key papers, widget: list, field: { name: item, label: Paper, widget: string } }
+              - { name: image, label: Photo, widget: image, required: false }
+              - { name: image_alt, label: Photo description, widget: string }
+              - { name: image_caption, label: Caption, widget: string }
+          - name: future
+            label: Where my research is going
+            widget: object
+            fields:
+              - { name: kicker, label: Small label, widget: string }
+              - { name: heading, label: Heading, widget: string }
+              - { name: body, label: Text, widget: markdown }
+              - { name: link_text, label: Link text, widget: string }
+          - name: toolkit
+            label: Methods
+            widget: object
+            fields:
+              - { name: kicker, label: Small label, widget: string }
+              - { name: heading, label: Heading, widget: string }
+              - name: items
+                label: Methods
+                widget: list
+                fields:
+                  - { name: label, label: Method, widget: string }
+                  - { name: value, label: Detail, widget: string }
+          - name: partners
+            label: Partners
+            widget: object
+            fields:
+              - { name: kicker, label: Small label, widget: string }
+              - { name: heading, label: Heading, widget: string }
+              - name: items
+                label: Partners
+                widget: list
+                fields:
+                  - { name: label, label: Partner, widget: string }
+                  - { name: value, label: Detail, widget: string }
+          - name: funding
+            label: Grants
+            widget: object
+            fields:
+              - { name: kicker, label: Small label, widget: string }
+              - { name: heading, label: Heading, widget: string }
+              - { name: intro, label: Summary line, widget: text }
+              - name: items
+                label: Grants
+                widget: list
+                fields:
+                  - { name: label, label: Funder, widget: string }
+                  - { name: value, label: Detail, widget: string }
+          - name: service
+            label: Service and affiliations
+            widget: object
+            fields:
+              - { name: kicker, label: Small label, widget: string }
+              - { name: heading, label: Heading, widget: string }
+              - name: items
+                label: Entries
+                widget: list
+                fields:
+                  - { name: label, label: Role, widget: string }
+                  - { name: value, label: Detail, widget: string }
+
+      - name: teaching
+        label: Teaching page
+        file: content/teaching.yml
+        fields:
+          - name: head
+            label: Page header
+            widget: object
+            fields:
+              - { name: kicker, label: Small label, widget: string }
+              - { name: heading, label: Heading, widget: string }
+              - { name: lede, label: Opening sentence, widget: text }
+          - { name: meta_description, label: Search engine description, widget: text }
+          - name: strip
+            label: Facts strip
+            widget: list
+            fields:
+              - { name: label, label: Label, widget: string }
+              - { name: value, label: Value, widget: string }
+          - name: philosophy
+            label: "1. Approach"
+            widget: object
+            fields:
+              - { name: kicker, label: Small label, widget: string }
+              - { name: heading, label: Heading, widget: string }
+              - { name: body, label: Text, widget: markdown }
+          - name: field_courses
+            label: "2. Field courses"
+            widget: object
+            fields:
+              - { name: kicker, label: Small label, widget: string }
+              - { name: heading, label: Heading, widget: string }
+              - { name: body, label: Text, widget: markdown }
+              - name: skills
+                label: Skills taught
+                widget: list
+                fields:
+                  - { name: label, label: Skill, widget: string }
+                  - { name: value, label: Detail, widget: string }
+          - name: earlier
+            label: "3. Earlier teaching"
+            widget: object
+            fields:
+              - { name: kicker, label: Small label, widget: string }
+              - { name: heading, label: Heading, widget: string }
+              - name: items
+                label: Entries
+                widget: list
+                fields:
+                  - { name: label, label: Programme, widget: string }
+                  - { name: value, label: Detail, widget: text }
+          - name: courses
+            label: "4. Courses"
+            widget: object
+            fields:
+              - { name: kicker, label: Small label, widget: string }
+              - { name: heading, label: Heading, widget: string }
+              - name: items
+                label: Courses
+                widget: list
+                fields:
+                  - { name: level, label: Level, widget: string }
+                  - { name: title, label: Course title, widget: string }
+                  - { name: body, label: Description, widget: text }
+              - { name: also, label: Also line, widget: string }
+          - name: mentoring
+            label: "5. Mentoring"
+            widget: object
+            fields:
+              - { name: kicker, label: Small label, widget: string }
+              - { name: heading, label: Heading, widget: string }
+              - { name: body, label: Introduction, widget: text }
+              - name: items
+                label: Entries
+                widget: list
+                fields:
+                  - { name: label, label: Who, widget: string }
+                  - { name: value, label: Detail, widget: text }
+          - name: outreach
+            label: "6. Outreach"
+            widget: object
+            fields:
+              - { name: kicker, label: Small label, widget: string }
+              - { name: heading, label: Heading, widget: string }
+              - { name: body, label: Text, widget: markdown }
+
+      - name: publications
+        label: Publications page
+        file: content/publications.yml
+        fields:
+          - name: head
+            label: Page header
+            widget: object
+            fields:
+              - { name: kicker, label: Small label, widget: string }
+              - { name: heading, label: Heading, widget: string }
+              - { name: lede, label: Opening sentence, widget: text, hint: "You can write links as [text](https://address)" }
+          - { name: meta_description, label: Search engine description, widget: text }
+          - { name: search_placeholder, label: Search box placeholder, widget: string }

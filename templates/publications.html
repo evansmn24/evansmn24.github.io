@@ -1,0 +1,26 @@
+{% extends "_layout.html" %}
+{% set page = 'publications' %}
+{% block title %}Publications | {{ site.name }}{% endblock %}
+{% block description %}{{ c.meta_description }}{% endblock %}
+{% block main %}
+    <header class="page-head">
+      <div class="wrap">
+        <p class="kicker">{{ c.head.kicker }}</p>
+        <h1>{{ c.head.heading }}</h1>
+        <p class="lede">{{ c.head.lede | mdi }}</p>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="pub-tools">
+          <label for="pub-search" class="pub-meta" style="position:absolute;left:-9999px">Search publications</label>
+          <input type="search" id="pub-search" placeholder="{{ c.search_placeholder }}">
+          <span class="pub-meta" id="pub-meta"></span>
+        </div>
+        <div id="all-pubs">
+          <noscript><p>See the full list on <a href="{{ site.scholar_url }}">Google Scholar</a>.</p></noscript>
+        </div>
+      </div>
+    </section>
+{%- endblock %}

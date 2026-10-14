@@ -1,0 +1,140 @@
+{% extends "_layout.html" %}
+{% set page = 'research' %}
+{% block title %}Research | {{ site.name }}{% endblock %}
+{% block description %}{{ c.meta_description }}{% endblock %}
+{% macro papers(list, night=False) -%}
+          <ul class="key-papers"{% if night %} style="border-color:var(--rust-bright)"{% endif %}>
+{%- for p in list %}
+            <li{% if night %} style="color:var(--night-muted)"{% endif %}>{{ p | mdi }}</li>
+{%- endfor %}
+          </ul>
+{%- endmacro %}
+{% macro ruled(items) -%}
+        <ul class="ruled" style="margin-top:1.5rem">
+{%- for it in items %}
+          <li><b>{{ it.label | mdi }}</b><span>{{ it.value | mdi }}</span></li>
+{%- endfor %}
+        </ul>
+{%- endmacro %}
+{% block main %}
+    <header class="page-head">
+      <div class="wrap">
+        <p class="kicker">{{ c.head.kicker }}</p>
+        <h1>{{ c.head.heading }}</h1>
+        <p class="lede">{{ c.head.lede | mdi }}</p>
+      </div>
+    </header>
+
+    <!-- 1: Movement -->
+    <section class="section">
+      <div class="wrap research-block">
+        <div data-reveal>
+          <p class="kicker"><span class="num">01</span> {{ c.movement.kicker }}</p>
+          <h2>{{ c.movement.heading }}</h2>
+          {{ c.movement.body | md }}
+{{ papers(c.movement.papers) }}
+        </div>
+        <figure class="research-media" data-reveal>
+          <img src="{{ c.movement.image }}" alt="{{ c.movement.image_alt }}" loading="lazy">
+          <figcaption>{{ c.movement.image_caption | mdi }}</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 2: Health -->
+    <section class="section">
+      <div class="wrap research-block flip">
+        <div data-reveal>
+          <p class="kicker"><span class="num">02</span> {{ c.health.kicker }}</p>
+          <h2>{{ c.health.heading }}</h2>
+          {{ c.health.body | md }}
+{{ papers(c.health.papers) }}
+        </div>
+        <figure class="research-media" data-reveal>
+          <img src="{{ c.health.image }}" alt="{{ c.health.image_alt }}" loading="lazy">
+          <figcaption>{{ c.health.image_caption | mdi }}</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 3: Disease & monitoring -->
+    <section class="section night">
+      <div class="wrap split">
+        <div data-reveal>
+          <p class="kicker"><span class="num">03</span> {{ c.disease.kicker }}</p>
+          <h2>{{ c.disease.heading }}</h2>
+        </div>
+        <div data-reveal>
+          {{ c.disease.body | md }}
+{{ papers(c.disease.papers, night=True) }}
+        </div>
+      </div>
+    </section>
+
+    <!-- 4: Natural history -->
+    <section class="section">
+      <div class="wrap research-block">
+        <div data-reveal>
+          <p class="kicker"><span class="num">04</span> {{ c.natural_history.kicker }}</p>
+          <h2>{{ c.natural_history.heading }}</h2>
+          {{ c.natural_history.body | md }}
+{{ papers(c.natural_history.papers) }}
+        </div>
+        <figure class="research-media" data-reveal>
+          <img class="natural" src="{{ c.natural_history.image }}" alt="{{ c.natural_history.image_alt }}" width="568" height="344" loading="lazy">
+          <figcaption>{{ c.natural_history.image_caption | mdi }}</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Future directions -->
+    <section class="section night">
+      <div class="wrap split">
+        <div data-reveal>
+          <p class="kicker">{{ c.future.kicker }}</p>
+          <h2>{{ c.future.heading }}</h2>
+        </div>
+        <div data-reveal>
+          {{ c.future.body | md }}
+          <p><a href="index.html#research">{{ c.future.link_text }}</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Toolkit -->
+    <section class="section">
+      <div class="wrap">
+        <p class="kicker">{{ c.toolkit.kicker }}</p>
+        <h2>{{ c.toolkit.heading }}</h2>
+{{ ruled(c.toolkit['items']) }}
+      </div>
+    </section>
+
+    <!-- Partners -->
+    <section class="section">
+      <div class="wrap">
+        <p class="kicker">{{ c.partners.kicker }}</p>
+        <h2>{{ c.partners.heading }}</h2>
+{{ ruled(c.partners['items']) }}
+      </div>
+    </section>
+
+    <!-- Funding -->
+    <section class="section">
+      <div class="wrap">
+        <p class="kicker">{{ c.funding.kicker }}</p>
+        <h2>{{ c.funding.heading }}</h2>
+        <p style="max-width:60ch">{{ c.funding.intro | mdi }}</p>
+{{ ruled(c.funding['items']) }}
+      </div>
+    </section>
+
+    <!-- Service -->
+    <section class="section">
+      <div class="wrap">
+        <p class="kicker">{{ c.service.kicker }}</p>
+        <h2>{{ c.service.heading }}</h2>
+{{ ruled(c.service['items']) }}
+      </div>
+    </section>
+{%- endblock %}

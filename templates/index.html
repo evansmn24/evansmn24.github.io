@@ -1,0 +1,143 @@
+{% extends "_layout.html" %}
+{% set page = 'home' %}
+{% block head_extra %}
+  <meta property="og:title" content="{{ site.name }} | {{ site.tagline }}">
+  <meta property="og:description" content="{{ site.og_description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="{{ site.site_url }}/{{ site.og_image }}">
+  <meta property="og:url" content="{{ site.site_url }}/">
+  <link rel="canonical" href="{{ site.site_url }}/">
+{%- endblock %}
+{% block main %}
+    <!-- Hero -->
+    <section class="hero">
+      <div class="wrap">
+        <div>
+          <p class="kicker">{{ c.hero.kicker }}</p>
+          <h1>{{ c.hero.heading }}</h1>
+          <p class="lede">{{ c.hero.lede | mdi }}</p>
+          <p class="role">
+            <strong>{{ c.hero.role_title }}</strong> · {{ c.hero.role_unit }}<br>
+            {{ c.hero.role_org }}<br>
+            {{ c.hero.role_degree }}
+          </p>
+          <div class="btn-row">
+            <a class="btn solid" href="research.html">{{ c.hero.button_primary }}</a>
+            <a class="btn" href="{{ site.cv_file }}">{{ c.hero.button_secondary }}</a>
+          </div>
+        </div>
+        <figure class="specimen">
+          <img src="{{ c.hero.image }}" alt="{{ c.hero.image_alt }}" width="1280" height="853">
+          <figcaption>
+            <b>{{ c.hero.image_species }}</b>
+            {{ c.hero.image_caption }}
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Field strip -->
+    <div class="field-strip">
+      <div class="wrap">
+        <dl>
+{%- for s in c.strip %}
+          <div><dt>{{ s.label }}</dt><dd>{{ s.value | mdi }}</dd></div>
+{%- endfor %}
+        </dl>
+      </div>
+    </div>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="wrap split">
+        <aside class="aside-card" data-reveal>
+          <h4>Currently</h4>
+          <p>{{ c.aside.currently | mdi }}</p>
+          <h4>Education</h4>
+          <ul>
+{%- for e in c.aside.education %}
+            <li>{{ e | mdi }}</li>
+{%- endfor %}
+          </ul>
+          <h4>Previously</h4>
+          <ul>
+{%- for e in c.aside.previously %}
+            <li>{{ e | mdi }}</li>
+{%- endfor %}
+          </ul>
+          <h4>Research interests</h4>
+          <ul>
+{%- for e in c.aside.interests %}
+            <li>{{ e | mdi }}</li>
+{%- endfor %}
+          </ul>
+        </aside>
+        <div data-reveal>
+          <p class="kicker"><span class="num">01</span> {{ c.about.kicker }}</p>
+          <h2>{{ c.about.heading }}</h2>
+          {{ c.about.body | md }}
+        </div>
+      </div>
+    </section>
+
+    <!-- Research themes -->
+    <section class="section night" id="research">
+      <div class="wrap">
+        <p class="kicker" data-reveal><span class="num">02</span> {{ c.research.kicker }}</p>
+        <h2 data-reveal>{{ c.research.heading }}</h2>
+        <p data-reveal style="max-width:60ch">{{ c.research.intro | mdi }}</p>
+        <ol class="themes">
+{%- for t in c.research.themes %}
+          <li data-reveal>
+            <div>
+              <h3>{{ t.title }}</h3>
+              <p>{{ t.body | mdi }}</p>
+              <p class="tags">{{ t.tags }}</p>
+            </div>
+          </li>
+{%- endfor %}
+        </ol>
+        <p style="margin-top:2rem" data-reveal><a href="research.html">{{ c.research.link_text }}</a></p>
+      </div>
+    </section>
+
+    <!-- Publications -->
+    <section class="section" id="publications">
+      <div class="wrap">
+        <p class="kicker"><span class="num">03</span> {{ c.publications.kicker }}</p>
+        <h2>{{ c.publications.heading }}</h2>
+        <ul class="pub-list" id="featured-pubs" style="margin-top:2rem"></ul>
+        <p style="margin-top:2rem"><a href="publications.html">{{ c.publications.link_text }}</a></p>
+      </div>
+    </section>
+
+    <!-- Teaching teaser -->
+    <section class="section" id="teaching">
+      <div class="wrap split">
+        <div>
+          <p class="kicker"><span class="num">04</span> {{ c.teaching.kicker }}</p>
+          <h2>{{ c.teaching.heading }}</h2>
+        </div>
+        <div data-reveal>
+          {{ c.teaching.body | md }}
+          <p><a href="teaching.html">{{ c.teaching.link_text }}</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section night" id="contact">
+      <div class="wrap contact-grid">
+        <div>
+          <p class="kicker"><span class="num">05</span> {{ c.contact.kicker }}</p>
+          <h2>{{ c.contact.heading }}</h2>
+          <p>{{ c.contact.body | mdi }}</p>
+        </div>
+        <ul class="contact-links">
+          <li><a href="mailto:{{ site.email }}"><span>Email</span><span>{{ site.email }}</span></a></li>
+          <li><a href="{{ site.scholar_url }}" target="_blank" rel="noopener"><span>Google Scholar</span><span>↗</span></a></li>
+          <li><a href="{{ site.cv_file }}"><span>Curriculum vitae</span><span>PDF ↓</span></a></li>
+        </ul>
+      </div>
+    </section>
+{%- endblock %}

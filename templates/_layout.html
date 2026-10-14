@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>{% block title %}{{ site.name }} | {{ site.tagline }}{% endblock %}</title>
+  <meta name="description" content="{% block description %}{{ site.meta_description }}{% endblock %}">
+{% block head_extra %}{% endblock %}
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="wrap" aria-label="Main">
+      <a class="brand" href="index.html">{{ site.name }}<span>.</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html"{% if page == 'home' %} aria-current="page"{% endif %}>About</a></li>
+        <li><a href="research.html"{% if page == 'research' %} aria-current="page"{% endif %}>Research</a></li>
+        <li><a href="publications.html"{% if page == 'publications' %} aria-current="page"{% endif %}>Publications</a></li>
+        <li><a href="teaching.html"{% if page == 'teaching' %} aria-current="page"{% endif %}>Teaching</a></li>
+        <li><a href="{{ site.cv_file }}">CV</a></li>
+        <li><a href="{% if page == 'home' %}#contact{% else %}index.html#contact{% endif %}">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+{% block main %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© <span data-year>2026</span> {{ site.name }}</span>
+      <span>{{ site.tagline }}</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
