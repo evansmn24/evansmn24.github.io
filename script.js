@@ -52,11 +52,9 @@ document.addEventListener('DOMContentLoaded', () => {
         .filter(p => p.year > 0)
         .sort((a, b) => b.year - a.year || (b.citations || 0) - (a.citations || 0));
 
-      // Home page: featured selection (flagged in JSON), falling back to most recent
+      // Home page: full list, newest first
       if (featuredEl) {
-        let featured = pubs.filter(p => p.featured);
-        if (featured.length === 0) featured = pubs.slice(0, 4);
-        featuredEl.innerHTML = featured.map(p => pubHTML(p)).join('');
+        featuredEl.innerHTML = pubs.map(p => pubHTML(p)).join('');
         featuredEl.querySelectorAll('.pub').forEach(reveal);
       }
 

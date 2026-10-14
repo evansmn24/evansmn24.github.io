@@ -5,7 +5,7 @@ Static academic site for Meaghan N. Evans (GitHub Pages). No build step: edit th
 - `index.html`, `research.html`, `publications.html`, `teaching.html`: pages
 - `style.css`, `script.js`: shared styles and behaviour
 - `publications.json`: refreshed weekly from Google Scholar by `.github/workflows/update-publications.yml`
-  (needs a `SERPAPI_KEY` repository secret). Set `"featured": true` on a paper to show it on the home page.
+  (needs a `SERPAPI_KEY` repository secret). The home page lists every publication, newest first.
 
 ## Before launch
 - [ ] Add an up-to-date CV as `assets/Evans_MN_CV.pdf` (without phone number or references)
